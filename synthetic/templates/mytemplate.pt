@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Simulate Outages</title>
+    </head>
+    <body>
+        <form action="/?sev=1" method="POST">
+            Sev-1 Url:
+            <select name="error_type" id="error_type" onchange="" size="1">
+                <option value="0">200: Success - UP XML</option>
+                <option value="1">200: Success - DOWN XML</option>
+                <option value="2">200: Success - No XML</option>
+                <option value="3">401: Invalid Credentials - No XML</option>
+                <option value="4">500: Internal Server Error - No XML</option>
+                <option value="5">503: Server Unavailable - No XML</option>
+                <option value="6">15 Second Timeout - UP XML</option>
+                <option value="7">30 Second Timeout - UP XML</option>
+                <option value="8">45 Second Timeout - UP XML</option>
+                <option value="9">60 Second Timeout - UP XML</option>
+                <option value="10">15 Second Timeout - DOWN XML</option>
+                <option value="11">30 Second Timeout - DOWN XML</option>
+                <option value="12">45 Second Timeout - DOWN XML</option>
+                <option value="13">60 Second Timeout - DOWN XML</option>
+                <option value="14">15 Second Timeout - No XML</option>
+                <option value="15">30 Second Timeout - No XML</option>
+                <option value="16">45 Second Timeout - No XML</option>
+                <option value="17">60 Second Timeout - No XML</option>
+            </select>
+            <button type="submit">Save</button>
+        </form>
+        <form action="/?sev=2" method="POST">
+            Sev-2 Url:
+            <select name="error_type" id="error_type" onchange="" size="1">
+                <option value="0">200: Success - UP XML</option>
+                <option value="1">200: Success - DOWN XML</option>
+                <option value="2">200: Success - No XML</option>
+                <option value="3">401: Invalid Credentials - No XML</option>
+                <option value="4">500: Internal Server Error - No XML</option>
+                <option value="5">503: Server Unavailable - No XML</option>
+                <option value="6">15 Second Timeout - UP XML</option>
+                <option value="7">30 Second Timeout - UP XML</option>
+                <option value="8">45 Second Timeout - UP XML</option>
+                <option value="9">60 Second Timeout - UP XML</option>
+                <option value="10">15 Second Timeout - DOWN XML</option>
+                <option value="11">30 Second Timeout - DOWN XML</option>
+                <option value="12">45 Second Timeout - DOWN XML</option>
+                <option value="13">60 Second Timeout - DOWN XML</option>
+                <option value="14">15 Second Timeout - No XML</option>
+                <option value="15">30 Second Timeout - No XML</option>
+                <option value="16">45 Second Timeout - No XML</option>
+                <option value="17">60 Second Timeout - No XML</option>
+            </select>
+            <button type="submit">Save</button>
+        </form>
+    </body>
+</html>
