@@ -15,8 +15,6 @@ def my_view(request):
     return {"test": test_type}
 
 XML_STRING = """
-<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-
 <pingdom_http_custom_check>
     <status>%(status)s</status>
     <response_time>%(response)s</response_time>
@@ -31,13 +29,13 @@ def test_page(request):
         request.response.status = 200
         return (XML_STRING % {
             "status": "OK",
-            "response": "%fms" % ((random.random() * 300) / 10.0)
+            "response": "%f" % ((random.random() * 300) / 10.0)
         }).strip()
     elif current_test == 1:
         request.response.status = 200
         return (XML_STRING % {
             "status": "DOWN",
-            "response": "%fms" % ((random.random() * 300) / 10.0)
+            "response": "%f" % ((random.random() * 300) / 10.0)
         }).strip()
     elif current_test == 2:
         request.response.status = 200
@@ -57,12 +55,12 @@ def test_page(request):
         if current_test in range(6,10):
             ret_str = (XML_STRING % {
                 "status": "OK",
-                "response": "%fms" % ((random.random() * 300) / 10.0 + sleep_time)
+                "response": "%f" % ((random.random() * 300) / 10.0 + sleep_time)
             }).strip()
         elif current_test in range(10,14):
             ret_str = (XML_STRING % {
                 "status": "DOWN",
-                "response": "%fms" % ((random.random() * 300) / 10.0 + sleep_time)
+                "response": "%f" % ((random.random() * 300) / 10.0 + sleep_time)
             }).strip()
         else:
             ret_str = ""
